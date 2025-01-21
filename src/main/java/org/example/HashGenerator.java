@@ -30,7 +30,30 @@ public class HashGenerator {
         System.out.println("2. SHA-1");
         System.out.println("3. SHA-256");
         System.out.print("Tanlovni kiriting (1, 2 yoki 3): ");
-//        int choice = scanner.nextInt();
+        int choice = scanner.nextInt();
         scanner.nextLine();
+        String algorithm;
+        switch (choice) {
+            case 1:
+                algorithm = "MD5";
+                break;
+            case 2:
+                algorithm = "SHA-1";
+                break;
+            case 3:
+                algorithm = "SHA-256";
+                break;
+            default:
+                System.out.println("Noto'g'ri tanlov!");
+                return;
+        }
+        System.out.print("Matnni kiriting: ");
+        String input = scanner.nextLine();
+
+
+        String hash = generateHash(input, algorithm);
+        System.out.println(algorithm + " hash: " + hash);
+
+        scanner.close();
     }
 }
