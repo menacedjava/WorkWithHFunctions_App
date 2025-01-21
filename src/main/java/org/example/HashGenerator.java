@@ -1,7 +1,7 @@
 package org.example;
 
 
-public class Main {
+public class HashGenerator {
     public static void main(String[] args) {
 
     }
